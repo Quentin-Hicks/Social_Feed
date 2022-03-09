@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
-
 
 const DisplayPostForm = (props) => {
 
-    const [name, setName] = useState('')
-    const [post, setPost] = useState('')
+    
 
     return (
-        <form>
-            <label>Name</label>
-            <input type='text' onChange={(event) => setName(event.target.value)} value={name}/>
-            <label>Post</label>
-            <input type='text' onChange={(event) => setPost(event.target.value)} value={post}/>
-        </form>
+        <table>
+            <tbody>
+                {props.parentPost.map((post, index) => {
+                    return(
+                        <tr key = {index} >
+                            <td>{post.name}</td>
+                            <td>{post.post}</td>
+                            <td>{/* buttons here */}</td>
+                        </tr>
+                    )
+                })}
+            </tbody>
+        </table>
     )
 }
 

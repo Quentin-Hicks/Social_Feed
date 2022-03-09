@@ -11,7 +11,7 @@ function App() {
 
   function addNewPost(post){ // this function will pull post data from my CreatePost component and save it to my post "hook" above
       
-    let tempPosts = [...posts, post] // ... is saving allthe existing post data and adding the new post
+    let tempPosts = [...posts, post] // ... is saving all the existing post data and adding the new post
 
     setPosts(tempPosts)   // saving the data in our hook above on line 9
   }
@@ -25,7 +25,7 @@ function App() {
             <CreatePostForm addNewEntry={addNewPost} /> {/* passing in our function so we can pull data to this level and save it */}
           </div>
           <div>
-            <DisplayPostForm  />
+            <DisplayPostForm  parentPost={posts} />
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ const CreatePostForm = (props) => {
             </div>
             <div className='form-grid'>
                 <label>Post</label>
-                <input type='text' className='form-control' value={post} onChange={(event) => setName(event.target.value)} />
+                <input type='text' className='form-control' value={post} onChange={(event) => setPost(event.target.value)} />
                 {/* on change or each letter a user enters will update our hook on line 11 and will be used by our handleSubmit to pass the data along */}
             </div>
             <button type='submit' className='btn btn-primary' style={{'marginTop': '1em'}}>Create</button>
