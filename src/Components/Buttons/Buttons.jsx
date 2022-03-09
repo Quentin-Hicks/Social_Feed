@@ -3,26 +3,35 @@ import './Buttons.css'
 
 const Buttons = (props) => {
 
-    const [buttonClass, setButtonClass] = useState('inactive')
+    const [buttonClassLike, setButtonClassLike] = useState('inactive')
     const [buttonClassDislike, setButtonClassDislike] = useState('inactive')
-    function handleClick(){
+
+    function handleClickLike(){
         //TODO: Change/toggle between active & inactive css class
-        if(buttonClass === 'inactive'){
-            setButtonClass('active')
+        if(buttonClassLike === 'inactive'){
+            setButtonClassLike('active')
             setButtonClassDislike('inactive')
         }
         else {
-            setButtonClass('inactive')
+            setButtonClassLike('inactive')
         }
     }
 
     function handleClickDislike(){
+
+        if(buttonClassDislike === 'inactive'){
+            setButtonClassDislike('active')
+            setButtonClassLike('inactive')
+        }
+        else {
+            setButtonClassDislike('inactive')
+        }
         
     }
 
     return (
         <div>
-            <button className={buttonClass} onClick={handleClick}>like</button>
+            <button className={buttonClassLike} onClick={handleClickLike}>like</button>
             <button className={buttonClassDislike} onClick={handleClickDislike}>dislike</button>
         </div>
     )
