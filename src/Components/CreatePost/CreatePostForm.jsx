@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CreatePostForm.css'
 
 
 const CreatePostForm = (props) => {
@@ -17,18 +18,20 @@ const CreatePostForm = (props) => {
     }
 
     return (
-        <form>
-            <div>
+        <form onSubmit={handleSubmit} className='form-grid'>
+            <div className='form-grid'>
                 <label>Name</label>
-                <input />
+                <input type='text' className='form-control' value={name} onChange={(event) => setName(event.target.value)} />
+                {/* on change or each letter a user enters will update our hook on line 11 and will be used by our handleSubmit to pass the data along */}
             </div>
-            <div>
+            <div className='form-grid'>
                 <label>Post</label>
-                <input />
+                <input type='text' className='form-control' value={post} onChange={(event) => setName(event.target.value)} />
+                {/* on change or each letter a user enters will update our hook on line 11 and will be used by our handleSubmit to pass the data along */}
             </div>
-            <button>Create</button>
+            <button type='submit' className='btn btn-primary' style={{'marginTop': '1em'}}>Create</button>
         </form>
     )
 }
 
-export default CreatePost
+export default CreatePostForm
