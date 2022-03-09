@@ -1,4 +1,4 @@
-import Buttons from './Components/Buttons/Buttons'
+import Buttons from '../Buttons/Buttons'
 
 const DisplayPostForm = (props) => {
 
@@ -12,7 +12,7 @@ const DisplayPostForm = (props) => {
                         <tr key = {index} >
                             <td>{post.name}</td>
                             <td>{post.post}</td>
-                            <td>{/* buttons here */}</td>
+                            <Buttons />
                         </tr>
                     )
                 })}
