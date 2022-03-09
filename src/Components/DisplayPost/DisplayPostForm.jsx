@@ -1,3 +1,4 @@
+import Buttons from './Components/Buttons/Buttons'
 
 const DisplayPostForm = (props) => {
 
