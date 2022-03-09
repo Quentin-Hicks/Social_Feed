@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CreatePostForm from './Components/CreatePost/CreatePostForm';
 import './App.css'
+import DisplayPostForm from './Components/DisplayPost/DisplayPostForm';
 
 
 
@@ -22,6 +23,9 @@ function App() {
         <div className='col-md-6'>
           <div className='border-box'>
             <CreatePostForm addNewEntry={addNewPost} /> {/* passing in our function so we can pull data to this level and save it */}
+          </div>
+          <div>
+            <DisplayPostForm  />
           </div>
         </div>
       </div>
